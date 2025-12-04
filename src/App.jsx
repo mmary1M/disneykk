@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import s from './App.module.css';
-import {api} from './api/api';
-import { Card } from './componentes/card';
+import { useState, useEffect } from "react";
+import s from "./App.module.css";
+import { api } from "./api/api";
+import { Card } from "./componentes/card";
 
 function App() {
     const [data, setData] = useState([]);
@@ -10,11 +10,11 @@ function App() {
 
 
     useEffect(() => {
-
       api
         .get(`/character/?name=${searchName}&page=${searchPage}`)
         .then((response) => {
-          setData(response.data.results);
+          setData(response.data.data);
+          console.log(response.data.data)
         })
         .catch((error) => {
           console.error("NÃO FOI POSSÍVEL ACESSAR API", error);
@@ -35,7 +35,7 @@ function App() {
             return (
               <div key={index}>
                 <Card
-                  image={item.image}
+                  image={item.imageUrl}
                   name={item.name}
                   films={item.films}
                 />

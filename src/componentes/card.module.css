@@ -17,7 +17,7 @@
     border-radius: 999px;
     transition: all 200ms ease-in-out;
     filter: grayscale(1);
-    width: 90%;
+    width: 70%;
 }
 
 .cardBackground:hover .cardImage{

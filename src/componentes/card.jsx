@@ -1,4 +1,4 @@
-import s from './card.modele.css'
+import s from './card.module.css'
 
 // export const Card = (props) => {
 //     return(
@@ -16,7 +16,7 @@ export const Card = ({image, name, films}) => {
         <div className={s.cardBackground}>
         <img className={s.cardImage} src={image} alt={name} />
         <h2 className={s.carTitle}>{name}</h2>
-         <p className={s.cardText}>{films}</p>
+       {films.length > 0 ? <p className={s.cardText}>{films}</p> : <p>Nao tem filmes</p>}
         </div>
     )
 }
