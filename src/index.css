@@ -10,7 +10,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url('');
+    background-image: url('disney.jpg');
     background-position: inherit;
     background-repeat: no-repeat;
     background-attachment:  fixed;
@@ -31,7 +31,7 @@ input{
 @media(width >= 590px){
     body{
 
-        background-image: url('');
+        background-image: url('celular disney.jpg');
     }
     input{
         width: 300px;

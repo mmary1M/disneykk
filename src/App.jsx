@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import s from "./App.module.css";
-import { api } from "./api/api";
-import { Card } from "./components/card";
+import { useState, useEffect } from 'react';
+import s from './App.module.css';
+import {api} from './api/api';
+import { Card } from './componentes/card';
 
 function App() {
     const [data, setData] = useState([]);
@@ -10,6 +10,7 @@ function App() {
 
 
     useEffect(() => {
+
       api
         .get(`/character/?name=${searchName}&page=${searchPage}`)
         .then((response) => {
@@ -36,7 +37,7 @@ function App() {
                 <Card
                   image={item.image}
                   name={item.name}
-                  species={item.species}
+                  films={item.films}
                 />
               </div>
             );
